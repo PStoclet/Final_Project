@@ -12,11 +12,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     text-align: justify;
+    font-size: 0.7rem;
 }
 
 h2 {
     padding-bottom: 1em;
-    font-size: 2.5rem; /* Large font size for emphasis */
+    font-size: 1.5rem; /* Large font size for emphasis */
     font-weight: 700; /* Bold for a dramatic effect */
     color: #444; /* Darker gray for a subtle classic feel */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -54,8 +55,8 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    width: 50%; /* Default box width */
-    max-height: 90vh; /* Ensure it fits within the viewport height */
+    width: 80%; /* Default box width */
+    max-height: 70vh; /* Ensure it fits within the viewport height */
     overflow-y: auto; /* Enable scrolling for long content */
 }
 
@@ -66,7 +67,7 @@ h2 {
 
 .popup img {
     display: block;
-    height: 50vh; /* Keep the image responsive */
+    height: 40vh; /* Keep the image responsive */
     width: auto;
     margin: 0 auto 2rem; /* Center the image with spacing below */
     border-radius: 8px;
@@ -133,7 +134,7 @@ h2 {
 }
 
 .modal img {
-    height: 500px; /* Default size */
+    height: 50vh; /* Responsive height */
     width: auto; /* Maintain aspect ratio */
     border-radius: 8px;
 }
@@ -147,56 +148,92 @@ h2 {
     cursor: pointer;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
+/* Mobile Screens (0px and above) */
+@media (min-width: 0px) {
+    h2 {
+        font-size: 1.2rem; /* Smallest font size for mobile devices */
+    }
+
     .popup {
-        width: 70%; /* Reduce width for tablets */
+        width: 95%; /* Full-width popup for small screens */
     }
 
     .popup img {
-        height: 40vh; /* Adjust image height for tablets */
+        height: 20vh; /* Smaller image height for mobile */
+        width: auto; /* Maintain aspect ratio */
     }
 
-    h2 {
-        font-size: 2rem; /* Reduce header font size */
+    .legend {
+        padding: 0.5rem;
+        border-radius: 10px;
+        font-size: 0.7rem; /* Smallest font size for legends */
     }
 }
 
-@media (max-width: 768px) {
+/* Medium Screens (481px and above) */
+@media (min-width: 481px) {
+    h2 {
+        font-size: 1.8rem; /* Slightly larger font size */
+    }
+
     .popup {
-        width: 90%; /* Almost full screen for smaller devices */
+        width: 85%; /* Slightly larger width */
     }
 
     .popup img {
-        height: 30vh; /* Smaller image height */
+        height: 30vh; /* Adjusted image size */
+        width: auto;
     }
 
     .legend {
         padding: 0.8rem;
         border-radius: 15px;
-        font-size: 0.9rem; /* Slightly smaller text */
-    }
-
-    h2 {
-        font-size: 1.8rem; /* Smaller header font size */
+        font-size: 0.8rem;
     }
 }
 
-@media (max-width: 480px) {
+/* Larger Screens (769px and above) */
+@media (min-width: 769px) {
+    h2 {
+        font-size: 2rem; /* Larger font size */
+    }
+
     .popup {
-        padding: 0.5rem; /* Reduce padding */
+        width: 75%; /* Adjusted width for larger screens */
     }
 
     .popup img {
-        height: 25vh; /* Further reduce image height */
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Smallest header size */
+        height: 40vh; /* Adjusted image height */
+        width: auto;
     }
 
     .legend {
-        margin-bottom: 1rem;
-        padding: 0.5rem;
+        padding: 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
     }
 }
+
+/* Extra Large Screens (1024px and above) */
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 2.5rem; /* Largest font size */
+    }
+
+    .popup {
+        width: 70%; /* Reduced width for extra large screens */
+    }
+
+    .popup img {
+        height: 50vh; /* Larger image size */
+        width: auto;
+    }
+
+    .legend {
+        padding: 1.2rem;
+        border-radius: 25px;
+        font-size: 1rem;
+    }
+}
+
+
