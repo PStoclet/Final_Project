@@ -10,12 +10,12 @@
 <body>
 <header>
     <div class="header-logo-left">
-        <img src="adidas1.png" alt="Adidas Logo" class="header-logo">
+        <img src="images/adidas1.png" alt="Adidas Logo" class="header-logo">
     </div>
     <h1>Real Madrid Football Club</h1>
-    <img id="rotating-logo" class="transition-logo" src="Real-Madrid-symbol.png" alt="Real Madrid Logo">
+    <img id="rotating-logo" class="transition-logo" src="images/Real-Madrid-symbol.png" alt="Real Madrid Logo">
     <div class="header-logo-right">
-        <img src="Emirates.webp" alt="Fly Emirates Logo" class="header-logo">
+        <img src="images/Emirates.webp" alt="Fly Emirates Logo" class="header-logo">
     </div>
 </header>
 
@@ -43,47 +43,47 @@
         <div class="trophy-section">
             <!-- Trophy 1 -->
             <div class="trophy-horizontal">
-                <img src="champions.webp" alt="Champions League Trophy" class="trophy-image">
+                <img src="images/champions.webp" alt="Champions League Trophy" class="trophy-image">
                 <div class="trophy-info">
                     <h3>15 Champions League Wins</h3>
                     <p class="years">1955-56, 1956-57, 1957-58, 1958-59, 1959-60, 1965-66, 1997-98, 1999-00, 2001-02, 2013-14, 2015-16, 2016-17, 2017-18, 2021-22, 2023-24</p>
                 </div>
                 <div class="gallery-thumbnail" onclick="showGallery('champions')">
-                    <img src="pngwing.com.png" alt="Champions League Moment">
+                    <img src="images/pngwing.com.png" alt="Champions League Moment">
                 </div>
             </div>                       
             <!-- Trophy 2 -->
 
             <div class="trophy-horizontal">
-                <img src="LIGA.jpg" alt="La Liga Trophy" class="trophy-image">
+                <img src="images/LIGA.jpg" alt="La Liga Trophy" class="trophy-image">
                 <div class="trophy-info">
                     <h3>36 La Liga Titles</h3>
                     <p class="years">1931-32 , 1932-33 , 1953-54 , 1954-55 , 1956-57 , 1957-58 , 1960-61 , 1961-62 , 1962-63 , 1963-64 , 1964-65 , 1966-67 , 1967-68 , 1968-69 , 1971-72 , 1974-75 , 1975-76 , 1977-78 , 1978-79 , 1979-80 , 1985-86 , 1986-87 , 1987-88 , 1988-89 , 1989-90 , 1994-95 , 1996-97 , 2000-01 , 2002-03 , 2006-07 , 2007-08 , 2011-12 , 2016-17 , 2019-20 , 2021-22 , 2023-24</p>
                 </div>
                 <div class="gallery-thumbnail" onclick="showGallery('laliga')">
-                    <img src="Sergio.webp" alt="La Liga Trophy">
+                    <img src="images/Sergio.webp" alt="La Liga Trophy">
                 </div>
             </div> 
 
             <div class="trophy-horizontal">
-                <img src="Coparey.webp" alt="Copa Del Rey" class="trophy-image">
+                <img src="images/Coparey.webp" alt="Copa Del Rey" class="trophy-image">
                 <div class="trophy-info">
                     <h3>20 Copa Del Rey Titles</h3>
                     <p class="years">1904-05 , 1905-06 , 1906-07 , 1907-08 , 1916-17 , 1933-34 , 1935-36 , 1945-46 , 1946-47 , 1961-62 , 1969-70 , 1973-74 , 1974-75 , 1979-80 , 1981-82 , 1988-89 , 1992-93 , 2010-11 , 2013-14 , 2022-23</p>
                 </div>
                 <div class="gallery-thumbnail" onclick="showGallery('Copadelrey')">
-                    <img src="Bellingham.webp" alt="Copa Del Rey">
+                    <img src="images/Bellingham.webp" alt="Copa Del Rey">
                 </div>
             </div> 
 
             <div class="trophy-horizontal">
-                <img src="SupercopaEspana.webp" alt="Supercopa de España" class="trophy-image">
+                <img src="images/SupercopaEspana.webp" alt="Supercopa de España" class="trophy-image">
                 <div class="trophy-info">
                     <h3>36 Supercopa Titles</h3>
                     <p class="years">1988 , 1989 , 1990 , 1993 , 1997 , 2001 , 2003 , 2008 , 2012 , 2017 , 2020 , 2022 , 2024</p>
                 </div>
                 <div class="gallery-thumbnail" onclick="showGallery('Supercopa')">
-                    <img src="Supercopadeespaña4.webp" alt="Copa Del Rey">
+                    <img src="images/Supercopadeespaña4.webp" alt="Copa Del Rey">
                 </div>
             </div> 
         </div>
@@ -142,10 +142,10 @@
 
     // Define images for the gallery
     const galleries = {
-        champions: ['Champions1.jpg', 'Champions2.webp','1991-2000-2.jpg','2011-2020-2.jpg'], // Example images
-        laliga: ['LIGA1.webp', 'LIGA2.webp'],
-        Copadelrey: ['Copadelrey.webp','Copadelrey2.webp','Copadelrey3.webp'],
-        Supercopa:['Supercopadeespaña.webp','Supercopadeespaña2.webp','Supercopadeespaña3.webp']
+        champions: ['images/Champions1.jpg', 'images/Champions2.webp','images/1991-2000-2.jpg','images/2011-2020-2.jpg'], // Example images
+        laliga: ['images/LIGA1.webp', 'images/LIGA2.webp'],
+        Copadelrey: ['images/Copadelrey.webp','images/Copadelrey2.webp','images/Copadelrey3.webp'],
+        Supercopa:['images/Supercopadeespaña.webp','images/Supercopadeespaña2.webp','images/Supercopadeespaña3.webp']
     };
 
     let currentImageIndex = 0;
