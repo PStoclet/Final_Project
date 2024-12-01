@@ -92,17 +92,17 @@
     background-color: #d4af37; /* Subtle hover effect */
 }
 
-/* Transparent Overlay for Time Frame */
+/* Default Styles for Small Screens */
 .time-frame-overlay {
     position: relative;
-    height: 120px; /* Increased height for more prominence */
+    height: 80px; /* Smaller height for smaller screens */
     width: 100%; /* Full width */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 6rem; /* Increased font size */
-    font-weight: 800; /* Increased font weight for more visibility */
-    color: rgba(0, 0, 0, 0.4); /* Darker opacity for better contrast */
+    font-size: 3rem; /* Smaller font size for small screens */
+    font-weight: 700; /* Slightly reduced font weight */
+    color: rgba(0, 0, 0, 0.3); /* Subtle color for better contrast */
     text-transform: uppercase;
     z-index: -1;
     margin-bottom: 1rem;
@@ -117,18 +117,20 @@
     margin: 0 auto; /* Center the container */
     position: relative; /* Required for positioning child elements like arrows */
     padding: 0; /* Remove padding to avoid unnecessary spacing */
+    margin-bottom: 10px; /* Reduce margin below image for tighter layouts */
 }
 
 
 
 /* Timeline Image Styling */
 #timeline-image {
-    width: auto; /* Maintain the image's original aspect ratio */
-    height: 300px; /* Specify height directly for control */
+    width: 100%; /* Maintain the image's original aspect ratio */
+    height: auto; /* Specify height directly for control */
     object-fit: contain; /* Ensure the image fits within the container without distortion */
     border-radius: 8px; /* Add subtle rounding */
     display: block; /* Prevent any extra spacing below the image */
     background: transparent; /* Ensure no background color */
+    max-height: 200px; /* Limit height for smaller screens */
 }
 
 
@@ -187,39 +189,73 @@
     margin-bottom: 1rem; /* Add spacing below the info */
 }
 
-/* Content Text Styling */
+/* Default Styles for Small Screens */
 #extended-content p {
-    font-size: 1rem; /* Adjusted font size for readability */
-    line-height: 1.8; /* Improved line spacing */
-    margin-bottom: 18px; /* Add spacing between paragraphs */
-    margin-left: 2rem; /* Provide space on the left */
-    margin-right: 2rem; /* Provide space on the right */
-    width: calc(100% - 4rem); /* Ensure text fits within the screen with padding */
-    text-align: justify; /* Justify text alignment */
-    color: #333; /* Slightly lighter than black for comfortable reading */
+    font-size: 0.9rem; /* Smaller font size for readability on small screens */
+    line-height: 1.5; /* Reduced line spacing */
+    margin-bottom: 12px; /* Smaller spacing between paragraphs */
+    margin-left: 1rem; /* Smaller left margin */
+    margin-right: 1rem; /* Smaller right margin */
+    width: calc(100% - 2rem); /* Adjusted width for padding */
+    text-align: justify; /* Maintain justified alignment */
+    color: #333; /* Comfortable reading color */
 }
 
 
-/* Adjustments for Small Screens */
-@media (max-width: 768px) {
+
+/* Styles for Screens Larger Than 768px */
+@media (min-width: 768px) {
     #extended-content p {
-        font-size: 0.95rem; /* Slightly smaller font for mobile */
-        padding: 0 1rem; /* Add padding to maintain readability */
-        width: calc(100% - 2rem); /* Use available space minus padding */
+        font-size: 1rem; /* Adjust font size for medium screens */
+        line-height: 1.8; /* Improved line spacing for readability */
+        margin-bottom: 18px; /* Add spacing between paragraphs */
+        margin-left: 2rem; /* Provide space on the left */
+        margin-right: 2rem; /* Provide space on the right */
+        width: calc(100% - 4rem); /* Adjust width for medium screens */
     }
 
     #timeline-image {
-        width: 100%; /* Allow image to scale fully within the screen */
-        height: auto; /* Maintain aspect ratio */
-        max-height: 200px; /* Limit height for smaller screens */
+        height: 300px; /* Specify height directly for control */
+        max-height: none; /* Remove height limit */
     }
 
     #image-container {
-        margin-bottom: 10px; /* Reduce margin below image for tighter layouts */
+        margin-bottom: 20px; /* Restore original spacing */
+    }
+
+    .time-frame-overlay {
+        height: 120px; /* Increase height for larger screens */
+        font-size: 5rem; /* Adjust font size for visibility */
+        font-weight: 800; /* Increased font weight */
+        color: rgba(0, 0, 0, 0.4); /* Slightly darker opacity */
+    }
+
+    h2.history-title {
+        font-size: 2rem; /* Increase font size for tablets */
     }
 }
 
+/* Styles for Screens Larger Than 1024px */
+@media (min-width: 1024px) {
+    .time-frame-overlay {
+        height: 150px; /* Further increase height for larger screens */
+        font-size: 6rem; /* Larger font size for emphasis */
+        font-weight: 900; /* Boldest font weight */
+        color: rgba(0, 0, 0, 0.5); /* More prominent contrast */
+    }
+    #extended-content p {
+        font-size: 1.2rem; /* Larger font size for improved readability */
+        line-height: 2; /* Increased line spacing */
+        margin-bottom: 24px; /* More spacing between paragraphs */
+        margin-left: 3rem; /* Provide even more space on the left */
+        margin-right: 3rem; /* Provide even more space on the right */
+        width: calc(100% - 6rem); /* Adjust width for large screens */
+    }
 
+    h2.history-title {
+        font-size: 2.5rem; /* Larger font size for desktop screens */
+    }
+}
 
 
 .decade-range {
@@ -245,16 +281,17 @@
 }
 
 
-/* Styling for History Title */
-h2.history-title {
-    font-size: 2.5rem; /* Large font size for emphasis */
-    font-weight: 700; /* Bold for a dramatic effect */
-    color: #444; /* Darker gray for a subtle classic feel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    margin-top: 1.5rem; /* Add some space above */
-    margin-bottom: 2rem; /* Add spacing below */
-    line-height: 1.2; /* Adjust line height for readability */
+/* Default Title Styling (for smallest screens) */
+
+h2 {
+    font-size: 1.5rem; /* Base font size for smallest screens */
+    font-weight: 700;
+    color: #444;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+    line-height: 1.2;
 }
 
 h2.history-title:hover {
