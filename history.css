@@ -206,7 +206,7 @@
 /* Styles for Screens Larger Than 768px */
 @media (min-width: 768px) {
     #extended-content p {
-        font-size: 1rem; /* Adjust font size for medium screens */
+        font-size: 0.9rem; /* Adjust font size for medium screens */
         line-height: 1.8; /* Improved line spacing for readability */
         margin-bottom: 18px; /* Add spacing between paragraphs */
         margin-left: 2rem; /* Provide space on the left */
@@ -244,7 +244,7 @@
         color: rgba(0, 0, 0, 0.5); /* More prominent contrast */
     }
     #extended-content p {
-        font-size: 1.2rem; /* Larger font size for improved readability */
+        font-size: 1.1rem; /* Larger font size for improved readability */
         line-height: 2; /* Increased line spacing */
         margin-bottom: 24px; /* More spacing between paragraphs */
         margin-left: 3rem; /* Provide even more space on the left */
