@@ -1,0 +1,320 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2:hover{
+    color: #d4af37;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffffff, #e5e4e4);
+}
+
+header {
+    background-color: #000;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Align logos and title vertically */
+    justify-content: center; /* Ensures the title stays at the center */
+    padding: 1.2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2rem;
+    
+}
+
+header img {
+    height: 40px; /* Smaller logo size for proximity */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 30px; /* Reduce space between logo and title */
+}
+
+
+header .title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 40px; /* Ensures equal spacing on both sides of the title */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    flex: 1;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #1a73e8;
+}
+
+/* Main Content Styling */
+main {
+    margin-top: 6rem;
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: calc(100vh - 10rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transparent-background {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Squad-Specific Styling */
+.squad-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.squad-section img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.squad-section img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.squad-section p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.squad-section a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+.squad-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .squad-section img {
+        width: 90%;
+    }
+    .menu-bar {
+        width: 80%; /* Use 80% of the screen for smaller devices */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Smaller font for title on small devices */
+    }
+
+    header img {
+        display: none; /* Hides the logos */
+    }
+    header h1 {
+        font-size: 1.5rem; /* Smaller font size for tablets */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .menu-bar {
+        width: 100%; /* Use full width for very small screens */
+    }
+    header h1 {
+        font-size: 1.3rem; /* Even smaller font size for small screens */
+    }
+}
+
+/* Rotating Real Madrid Logo */
+#rotating-logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    animation: rotateLeft 6s linear infinite;
+}
+
+
+@keyframes rotateLeft {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+/* Menu Bar Styling */
+.menu-bar {
+    position: fixed;
+    top: 0; /* Align with the header */
+    left: 0; /* Ensure it starts from the left */
+    background-color: #000;
+    color: #fff;
+    height: 100vh; /* Full height for vertical menu */
+    width: 250px; /* Default width for desktop */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1rem 1rem; /* Add padding for better alignment */
+}
+
+.menu-bar.active {
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Menu Bar Links */
+.menu-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    width: 100%; /* Full width for clickable area */
+    padding: 0.8rem 1rem; /* Add padding for spacing */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #444; /* Subtle divider */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-bar a:hover,
+.menu-bar a.active {
+    background-color: #d4af37; /* Gold background on hover and active state */
+    color: #000; /* Black text on hover and active state */
+    border-radius: 5px; /* Slight rounding */
+    transform: scale(1.01); /* Slight scaling */
+    font-weight: bold; /* Highlight active page */
+}
+
+
+.menu-icon {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d4af37;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon:hover {
+    background-color: #d4af37;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+
+
+/* Ensure smooth scrolling for in-page anchors */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Transition Logo Styles */
+#rotating-logo.transition-logo {
+    position:fixed;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 2000;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    background: transparent; 
+    height: 4em;
+    width: 4em;
+    display: flex;
+    align-items: center   
+}
+
+#rotating-logo.show-logo {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+

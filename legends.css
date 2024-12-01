@@ -1,0 +1,202 @@
+/* Legends List */
+.legends-list {
+    margin-top: 2rem;
+}
+
+.legend {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: justify;
+}
+
+h2 {
+    padding-bottom: 1em;
+    font-size: 2.5rem; /* Large font size for emphasis */
+    font-weight: 700; /* Bold for a dramatic effect */
+    color: #444; /* Darker gray for a subtle classic feel */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center; /* Center the text */
+    margin-top: 1.5rem; /* Add some space above */
+    margin-bottom: 0rem; /* Add spacing below */
+    line-height: 1.2; /* Adjust line height for readability */
+}
+
+/* Legend Name Hover */
+.legend-name {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legend-name:hover {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+/* Pop-up for Legend Image and Stats */
+.popup {
+    display: none;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem; /* Reduce padding */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 50%; /* Default box width */
+    max-height: 90vh; /* Ensure it fits within the viewport height */
+    overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.popup.visible {
+    display: block;
+    opacity: 1;
+}
+
+.popup img {
+    display: block;
+    height: 50vh; /* Keep the image responsive */
+    width: auto;
+    margin: 0 auto 2rem; /* Center the image with spacing below */
+    border-radius: 8px;
+    object-fit: contain; /* Ensure the image fits within the box */
+}
+
+.popup-stats {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.popup-stats p {
+    margin: 0.5rem 0;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: #d4af37;
+}
+
+.legend-stats {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.toggle-stats {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #444;
+    background: #f4f4f4;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-stats:hover {
+    background-color: #ddd;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal img {
+    height: 500px; /* Default size */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .popup {
+        width: 70%; /* Reduce width for tablets */
+    }
+
+    .popup img {
+        height: 40vh; /* Adjust image height for tablets */
+    }
+
+    h2 {
+        font-size: 2rem; /* Reduce header font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        width: 90%; /* Almost full screen for smaller devices */
+    }
+
+    .popup img {
+        height: 30vh; /* Smaller image height */
+    }
+
+    .legend {
+        padding: 0.8rem;
+        border-radius: 15px;
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Smaller header font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    .popup img {
+        height: 25vh; /* Further reduce image height */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smallest header size */
+    }
+
+    .legend {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+}

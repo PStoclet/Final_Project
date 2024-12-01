@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Real Madrid Football Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="history.css">
+</head>
+<body>
+<header>
+    <div class="header-logo-left">
+        <img src="adidas1.png" alt="Adidas Logo" class="header-logo">
+    </div>
+    <h1>Real Madrid Football Club</h1>
+    <img id="rotating-logo" class="transition-logo" src="Real-Madrid-symbol.png" alt="Real Madrid Logo">
+    <div class="header-logo-right">
+        <img src="Emirates.webp" alt="Fly Emirates Logo" class="header-logo">
+    </div>
+</header>
+
+<!-- Menu Icon -->
+<div class="menu-icon" id="menu-icon">
+    <span>&#9776;</span>
+</div>
+
+<!-- Menu Bar -->
+<div class="menu-bar" id="menu-bar">
+    <a href="index.html">Home</a>
+    <a href="history.html" class="active">History</a>
+    <a href="legends.html">Legends</a>
+    <a href="trophies.html">Trophy Cabinet</a>
+    <a href="squad.html">Current Squad</a>
+</div>
+
+<!-- Overlay for Menu -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<main>
+    <div class="transparent-background">
+        
+        <!-- Page Title -->
+        <h2 class="history-title">History of Real Madrid</h2>
+
+        <!-- Timeline Buttons -->
+        <div class="timeline-wrapper">
+            <button class="scroll-arrow left-arrow" id="scroll-left">❮</button>
+            <div class="timeline" id="timeline-container">
+                <button class="timeline-btn" data-decade="1902-1910">1902-1910</button>
+                <button class="timeline-btn" data-decade="1911-1920">1911-1920</button>
+                <button class="timeline-btn" data-decade="1921-1930">1921-1930</button>
+                <button class="timeline-btn" data-decade="1931-1940">1931-1940</button>
+                <button class="timeline-btn" data-decade="1941-1950">1941-1950</button>
+                <button class="timeline-btn" data-decade="1951-1960">1951-1960</button>
+                <button class="timeline-btn" data-decade="1961-1970">1961-1970</button>
+                <button class="timeline-btn" data-decade="1971-1980">1971-1980</button>
+                <button class="timeline-btn" data-decade="1981-1990">1981-1990</button>
+                <button class="timeline-btn" data-decade="1991-2000">1991-2000</button>
+                <button class="timeline-btn" data-decade="2001-2010">2001-2010</button>
+                <button class="timeline-btn" data-decade="2011-2020">2011-2020</button>
+                <button class="timeline-btn" data-decade="2021-2030">2021-2030</button>
+            </div>
+            <button class="scroll-arrow right-arrow" id="scroll-right">❯</button>
+        </div>
+
+        <!-- Content Area -->
+        <div id="content-container">
+            <div id="image-container">
+                <button class="image-arrow left-arrow" id="image-left" style="display: none;">❮</button>
+                <img id="timeline-image" src="Juan_Palacios.webp" alt="Real Madrid History">
+                <button class="image-arrow right-arrow" id="image-right">❯</button>
+            </div>
+        </div>
+            
+            <!-- Decade Range Display -->
+            <div class="time-frame-overlay" id="time-frame-overlay">
+                <span id="time-frame-text">1902-1910</span>
+            </div>
+
+            <!-- Main Timeline Info -->
+            <p id="timeline-info">A new sport from England called football started to take a grip of our country...</p>
+        
+
+        <!-- Extended Details -->
+         
+        <div id="extended-content"></div>
+    </div>
+</main>
+
+<footer>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1XredEKd4x9Ea4JaIN22KB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p>&copy; Real Madrid Football Club</p>
+</footer>
+
+<script>
+    // Menu functionality
+    const menuIcon = document.getElementById('menu-icon');
+    const menuBar = document.getElementById('menu-bar');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    function toggleMenu() {
+        menuBar.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    }
+
+    function closeMenu() {
+        menuBar.classList.remove('active');
+        menuOverlay.classList.remove('active');
+    }
+
+    menuIcon.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+    document.querySelectorAll('.menu-bar a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Timeline functionality
+    const timelineData = {
+        "1902-1910": {
+            images: ["Juan_Palacios.webp", "Juan Padros.jpg"],
+            info: "A new sport from England called football started to take a grip of our country...",
+            details: `
+                <p>Real Madrid was formally constituted in 1902.The figure of Julián Palacios was ever-present in the club's early years. It was he who, in 1900, called a general meeting to decide which players would form Madrid's first team. The Padrós brothers took the reins shortly afterwards. Football was starting to generate a lot of attention and the number of members was growing in leaps and bounds. Its constitution as a company came on the 6th of March 1902, with a board of directors presided by Juan Padrós.</p>
+                <p>Those visionary directors made a proposal to the mayor of Madrid, Alberto Aguilera; the constitution of the first football tournament. The first competition was established in honour of king Alfonso XIII. Five companies registered for the tournament, which was held in the Hipódromo. It was the beginnings of the Copa de España and of what would become Madrid's hallmark, victory. The Whites won four titles from the first six editions.</p>
+            `
+        },
+        "1911-1920": {
+            images: ["campo_de_odonnell.jpg", "Equipo1911.jpg"],
+            info: "Spanish football was going through a period of difficulty and uncertainty...",
+            details: `
+                <p>It was thought that the constitution of a Federation would be a quick solution to the crisis, but it was not to be. Each company was looking out for its own interests, and while some supported the Federación, others formed another organisation in parallel, the Unión de Clubes. The predominant feeling at Madrid was one of disappointment and disillusion. The board of directors even had to take action to avoid the 'resignation' of the president, Adolfo Meléndez.</p>
+                <p>The duplication of competitions and interests did nothing to undermine expectations in the world of fútbol. The fans were still turning up to see their team. Madrid, with the move to O’Donnell, had taken its first step towards professionalization. More spectators, more profit and more money to buy players. The new ground was better than that of Villa y Corte, with a capacity of 5,000.</p>
+                <p>The 1915-1916 season produced a brilliant performance in the Campeonato de España. The team was the runner-up after winning an epic semi-final against Español and losing an equally competitive final against Athletic de Bilbao. The circumstances of that match took their toll and resulted in the resignation of the entire board of directors, with Pedro Parages taking the reins from Adolfo Meléndez. The changes bore fruit, as the next season Madrid was the champion of Spain once more.</p>
+                
+            `
+        },
+        "1921-1930": {
+            images: ["campo-de-chamartin.jpg", "en-londres.jpg"],
+            info: "In the early 20s, Real Madrid returned to its pioneering role in Spanish football...",
+            details: `
+                <p>What began as a project between football fans at the start of the century was starting to take on unimaginable proportions. The silver medal won by the national side in the Olympic Games in Antwerp (1920) further bolstered its following. The outlook for our club was looking optimistic.</p>
+                <p>The Campeonato de Liga was born out of these circumstances and the enormous organisational problems in Spanish football were a thing of the past. The parties involved agreed that there should be three divisiones. The six champions of Spain, the three runners-up and the winner of a promotional tournament between the clubs in the Segunda would play in the Primera. It was a competition that would bring together teams from every corner of our country each year.</p>
+            `
+        },
+        "1931-1940": {
+        images: ["1931-1940-1.jpg", "1931-1940-2.jpg"],
+        info: "The arrival of Ricardo Zamora elevated Real Madrid's reputation...",
+        details: `
+            <p>Real Madrid had now accepted the fact that the success they craved would only be possible with the best players. With Zamora, Ciriaco, Quincoces, among others, the trophies came quickly. The 1931-1932 season was a great one for Lippo Hertza's team. The Whites finished the league as unbeaten champions. It was the start of an era of Madrid dominance.</p>
+            <p>Just a month after the latest cup win (1936), civil war broke out. Real Madrid's finest hour on the pitch so far, was under threat and cut short by the military conflict. It led to many players ending their careers or leaving the country in exile. The club and team would not be reassembled until after the war.</p>
+        `
+        },
+        "1941-1950": {
+            images: ["1941-1950-1.jpg", "1941-1950-2.jpg"],
+            info: "This period saw Santiago Bernabéu's visionary leadership...",
+            details: `
+                <p>The Whites tried to alleviate the effects of the Civil War (1936-39), which left it without some of its most emblematic names. Some important players were brought in, such as Pruden, Corona and Bañón. In 1943, in the semi-final of the cup, Real Madrid met Barcelona. In Les Corts, the eleven azulgranas won 3-0. In the return match, the Whites knocked out their opponent with an extraordinary comeback. Madrid won 11-1, and an eternal rivalry was born.</p>
+                <p>On the 15th of December 1943, Santiago Bernabéu became the club's president. It was the start of the legendary mandate in which the club pulled off some great deeds. He took charge intent on building bridges between all the clubs. In 1948 he was named president of honour and merit of the Whites “for his extraordinary work and continuing concern for the well-being of the Sociedad Real Madrid Club de Fútbol”.</p>
+                <p>Real Madrid faced Valencia in the final (June 9th 1946), ten years after the team had won its previous Copa de España. In the Montjuïc stadium the Whites dominated the game, beating Valencia 3-1, to win the cup once more. The mayor of Madrid presented Ipiña with the Sports Medal of the City for his part in 237 official matches. Each player received a leather purse with a one thousand peseta (6€) note.</p>
+            `
+        },
+        "1951-1960": {
+            images: ["1951-1960-1.jpg", "1951-1960-2.jpg"],
+            info: "Led by Alfredo Di Stéfano, Real Madrid dominated European football...",
+            details: `
+                <p>Football in Europe was being played at a high standard. Aware of this fact, at the start of the 50s, renowned French journalist Gabriel Hanot dreamed up a competition that would bring together the champions of each European league. His colleague Jacques Ferrán joined the project. Between them they drew up some regulations that reached the headquarters of the Union of European Football Associations (UEFA). The proposal was much to the liking of the heads of French publication ‘L’Equipe’, which organised the tournament.</p>
+                <p>They named a commission that included Santiago Bernabéu as one of its vice presidents. The championship became a reality in 1956. Real Madrid won the first European Cup in history on the 13th of June that year. It was the first of the five consecutive cups it would win. This great feat was achieved at the hands of one of history's greatest footballers, Alfredo Di Stéfano,  and during Bernabéu's presidency.</p>
+                <p>Madrid discovered Di Stéfano in the club's fiftieth anniversary year (1952), when the team took on Millonarios (4-2). Since then the club had its sights set on him and the following year he made his debut as a Madrid player. He became the best footballer in the Whites' history, receiving two Ballon d'Ors (1957 and 1959) as one of the stars of the team that ruled Europe for five years in a row. Everyone was enchanted by his wizardry and he raised the bar for the rest.</p>
+                <p>In the 1959-1960 season, ex-Madrid player Miguel Muñoz (enlazar ficha) took the reins of Real Madrid. He won the Fifth European Cup in his first season as manager, becoming the first footballer to win the European Cup as a player (three times) and as a manager. In 1960, the merengues were also crowned champions of the world as they won the first edition of the Intercontinental Cup (Real Madrid 5-1 Peñarol de Montevideo).</p>
+            `
+        },
+        "1961-1970": {
+            images: ["1961-1970-1.jpg", "1961-1970-2.jpg"],
+            info: "The team enjoyed domestic and European success with the 'Ye-Yé' generation...",
+            details: `
+                <p>In the 1961-62 season, Real Madrid again enjoyed an excellent campaign as they claimed a league and cup double, and were runners-up in the European Cup. On 18 March 1962, Madrid sealed another title win at their stadium, with two matches to spare. On 8 July 1962, the Whites beat Sevilla 2-1 in the cup final.</p>
+                <p>They were the kings of Spain and of Europe. On the 11th of May 1966, Real Madrid were crowned champions of Europe once again, against Partizán (2-1). Without Di Stéfano and Puskas, the most experienced player was Gento. The rest of the team was made up by Araquistáin, Pachín, Pedro de Felipe, Sanchís, Pirri, Zoco, Serena, Amancio, Grosso and Velázquez. After winning their Sixth European Cup, four of the players were photographed impersonating the Beatles. They then became known as the ‘ye-yé’ Madrid because of the chorus of the English group's song ‘She Loves You’.</p>
+            `
+        },
+        "1971-1980": {
+            images: ["1971-1980-1.jpg", "1971-1980-2.jpg"],
+            info: "This decade was marked by both triumph and tragedy...",
+            details: `
+                <p>The team proved to be very solid at home in the league in the 1978-79 season, with only five teams taking a point from the Bernabéu: Espanyol, Sevilla, Hércules, Las Palmas and Atlético de Madrid. Molowny knew how to get the best out of his players, also making a difference on the road. The win in the Molinón (0-1, with a goal from Santillana)  was key to the merengue's sixth league title.</p>
+                <p>The team's brilliant performances were tarnished by the death of the club's president. Real Madrid wanted to make a posthumous gesture of thanks to the late Santiago Bernabéu. The goal was for his great work at the club to live on in the collective memory. On the 31st of August 1979 the first edition of the tournament that bore his name was played. Four of continental football's great champions took part: Real Madrid, Ajax, Bayern Munich and Milan.</p>
+            `
+        },
+        "1981-1990": {
+            images: ["1981-1990-1.jpg", "1981-1990-2.jpg"],
+            info: "The 80s were dominated by Emilio Butragueño's 'Vulture's Cohort'...",
+            details: `
+                <p>In 1983, Castilla was crowned champion of the Segunda División under the orders of Amancio and with some stunning performances from five players: Pardeza, Sanchís, Míchel, Martín Vázquez and Butragueño. These gems from the academy were a real discovery and Di Stéfano did not hesitate to prepare them for the first team. The group made its breakthrough in 1985, winning five consecutive La Ligas and setting important records, such as the competition's top goal-scorer with 107.</p>
+                <p>Mexican striker Hugo Sánchez had a lot to do with this success. Together with veterans Juanito, Valdano and Santillana, he formed a 'Cohort' that was close to perfection. In his seven seasons in white he scored 251 goals, and was the league's top goal-scorer in four of them. His famous front-flip celebrations are burned into the retinas of Madrid fans.</p>
+                <p>In this decade Real Madrid also won its first UEFA title. It came in the 1984-85 season, in a two-legged final where they beat Videoton, a little-known team who had knocked out PSG, Partizán Belgrade and Manchester United. In the following campaign, the Whites successfully defended their title thanks to an unbelievable comeback. After losing the first leg 5-1 to Borussia Mönchengladbach, they won an epic tie in the return match with two goals from Valdano and another brace from Santillana to reach the quarters (4-0).</p>
+            `
+        },
+        "1991-2000": {
+            images: ["1991-2000-1.jpg", "1991-2000-2.jpg"],
+            info: "Jorge Valdano and Fabio Capello brought Real Madrid back to the top...",
+            details: `
+                <p>Having demonstrated his abilities at the helm of Tenerife, where his team played an attractive and efficient brand of football, Valdano returned to Real Madrid in 1994. With new signings Redondo, Laudrup, Amavisca and Cañizares, the Madrid side went on to win the league title. That same season, youth-academy player Raúl made his debut. On the 29th of October at 17 years of age, the young player from Madrid filled in for Martín Vázquez in La Romareda, where he would put in a stunning performance. A new legend was born.</p>
+                <p>Early in 1995, Valdano's Real Madrid beat Johan Cruyff's Barça 5-0 in the Santiago Bernabéu. It was a magical game that was televised and followed by more than 10 million viewers. But the bad results in the 95-96 season forced Lorenzo Sanz to bring in Fabio Capello, one of the most sought-after coaches in European football. The Italian had a dream squad. The signings of Seedorf, Suker, Mijatovic and Roberto Carlos, together with Raúl, Hierro and Redondo, took Madrid to a new league title.</p>
+                <p>The 20th of May 1998 was a historic day for the club. After 32 years, and under the orders of Jupp Heynckes, Real Madrid conquered Europe once more by beating Juventus in the final of the Champions League. A goal from Pedja Mijatovic in the 66th minute brought number Seven from the Amsterdam Arena to the Santiago Bernabéu trophy room. In December that year, this time at the hands of Guus Hiddink, Madrid won its second Intercontinental Cup.</p>
+                <p>In 1999, and after a lifetime connected to the club as a player, Vicente del Bosque returned as the first-team manager. The man from Salamanca managed to instil a philosophy in the team that made them the best in the continent. His first title came in 2000: the Eighth European Cup. In the same year, Florentino Pérez (enlazar ficha) took over the presidency and signed one of the best players on the planet, Luis Figo</p>
+
+            `
+        },
+        "2001-2010": {
+            images: ["2001-2010-1.jpg", "2001-2010-2.jpg"],
+            info: "This decade marked the arrival of the Galácticos...",
+            details: `
+                <p>Vicente del Bosque stayed on as manager until 2003. His philosophy and brand of football made Madrid into a team of champions. During his time at the helm, the Whites celebrated another European Cup victory, another Intercontinental Cup, two domestic championships, a Supercup of Spain and a UEFA Super Cup. It was an era that is only comparable with the Real Madrid of the 50s and 60s.</p>
+                <pFlorentino Pérez's management led to profound changes in the club's structure. He reorganised the institution's economy, making it the richest club in the world, and made far-reaching changes at the top of the organisation. He completely renovated the Santiago Bernabéu, created a new sports complex in Valdebebas and opened the Alfredo Di Stéfano stadium. Meanwhile, on the pitch, he made the fans' dreams come true by bringing in Zidane, Ronaldo and Beckham.</p>
+                <p>In his second spell (2006), the president continued to delight the supporters, signing the best players and managers in the world. Great players such as Cristiano Ronaldo and Benzemá among others, were brought in, along with manager José Mourinho. The Portuguese arrived in the Santiago Bernabéu a week after being crowned champions of Europe with Inter Milan in the same stadium.</p>
+            `
+        },
+        "2011-2020": {
+            images: ["2011-2020-1.jpg", "2011-2020-2.jpg"],
+            info: "Zidane led the club to unprecedented success...",
+            details: `
+                <p>In the first few years of this new decade three trophies were added to the cabinet by José Mourinho's Real Madrid. The most notable was the 2011-12 Liga title, which they won with a record-breaking 100 points, the highest score achieved in the history of the championship at that stage, and 121 goals. They also beat Barcelona to clinch a Copa del Rey and a Supercopa de España.</p>
+                <p>In June 2013, Carlo Ancelotti arrived at Real Madrid. The Italian won four trophies with the Whites, the first coming in the shape of Real Madrid's nineteenth Copa del Rey, after beating Barcelona 1-2 in the final. On 24 May 2014, Madrid lifted the European Cup once again, claiming La Décima with a 4-1 victory over Atlético in Lisbon. Goals from Ramos, Bale, Marcelo and Cristiano secured the triumph.</p>
+                <p>Two further triumphs arrived in the second season under Ancelotti: The European Super Cup, against Sevilla and Real Madrid’s first World Club Cup, against San Lorenzo. This meant Real Madrid capped of a historic year in their history in 2014, making it the year in which most trophies were won by the club. In June 2015, Rafa Benítez returned to the club where he cut his teeth, to take charge of the Whites. Then, in January 2016, Zidane made the step up to first team coach, following his legendary career as a player. His first season ended with the team lifting the La Undécima trophy, against Atlético in Milán.</p>
+                <p>The French tactician's second season in charge delivered a clutch of silverware. Real Madrid secured the Duodécima, becoming the first-ever team to successfully defend their continental crown in the Champions League era. Alongside this success in Europe's elite club competition, the team also captured the 2016/17 LaLiga crown, the club's third UEFA Super Cup and a second Club World Cup, after overcoming Manchester United, as well as a 10th Spanish Super Cup. In December 2017, the Whites clinched another Club World Cup crown and this fifth piece of silverware saw the team set a new record for the number of titles claimed in a calendar year.</p>
+                <p>The year 2018 is also part of the madridista legacy thanks to the club's Decimotercera, secured against Liverpool following victory in the showpiece in Kiev, whilst that year also yielded the club's seventh world club crown, won in the United Arab Emirates against Al Ain. Meanwhile, 2020 got up and running with an 11th Spanish Super Cup, which came on the back of victory over Atlético Madrid in Jeddah (Saudi Arabia). In July, Zinedine Zidane's men captured the club's 34th league crown.</p>
+            `
+        },
+        // Additional decades...
+        "2021-2030": {
+            images: ["2021-2030-1.jpg", "2021-2030-2.jpg"],
+            info: "Real Madrid's legacy continued with more European success...",
+            details: `
+                <p>Real Madrid won their 14th European Cup with Ancelotti at the helm. In his second spell in charge, the Italian coach won the continental trophy once again in 2022 by beating Liverpool in Paris. That was the crowning glory of a spectacular 2021/22 season in which two further trophies were clinched: the 12th Spanish Super Cup, with victory over Athletic in the final, and the 35th LaLiga title..</p>
+                <p>At the start of the 2022/23 season, further success followed with victory in the European Super Cup against Eintracht Frankfurt. In February 2023, our team clinched the Club World Cup for the eighth time with a win over Al Hilal in the final in Rabat. Ancelotti's side secured their third trophy of the season in May, beating Osasuna in the final of the Copa del Rey.</p>
+                <p>An excellent 2023/24 season was rounded off by winning La Decimoquinta. Our team edged Borussia Dortmund in the final at Wembley, ending the campaign undefeated. Ancelotti's men had previously clinched their 36th LaLiga title and beaten Barcelona in the final of their 13th Spanish Super Cup. That success carried over into the start of the 2024/25 campaign, where Real Madrid won the European Super Cup for the sixth time after beating Atalanta in the final to become the most successful team in the competition.</p>
+            `
+        }
+    };
+
+    let currentImageIndex = 0;
+
+    function updateImage(decade) {
+        const images = timelineData[decade].images;
+        const timelineImage = document.getElementById("timeline-image");
+        const leftArrow = document.getElementById("image-left");
+        const rightArrow = document.getElementById("image-right");
+
+        // Update the image source
+        timelineImage.src = images[currentImageIndex];
+
+        // Dynamically position the arrows based on the current image index
+        if (currentImageIndex === 0) {
+            leftArrow.style.display = "none"; // Hide left arrow for the first image
+            rightArrow.style.display = "block"; // Show right arrow for navigating forward
+            rightArrow.style.left = "auto"; // Reset positioning for right arrow
+            rightArrow.style.right = "10px"; // Ensure it is correctly placed on the right
+        } else if (currentImageIndex === images.length - 1) {
+            rightArrow.style.display = "none"; // Hide right arrow for the last image
+            leftArrow.style.display = "block"; // Show left arrow for navigating backward
+            leftArrow.style.left = "10px"; // Place left arrow correctly
+        } else {
+            leftArrow.style.display = "block";
+            rightArrow.style.display = "block";
+            leftArrow.style.left = "10px"; // Ensure left arrow is correctly placed
+            rightArrow.style.right = "10px"; // Ensure right arrow is correctly placed
+        }
+
+        // Special case: single image in the decade
+        if (images.length === 1) {
+            leftArrow.style.display = "none"; // Hide the left arrow
+            rightArrow.style.display = "block"; // Show right arrow
+            rightArrow.style.left = "10px"; // Place right arrow on the left for single image case
+            rightArrow.style.right = "auto"; // Reset the right positioning
+        }
+    }
+
+    // Function to update content when a decade is clicked
+    function updateContent(decade) {
+        const content = timelineData[decade];
+        document.getElementById("timeline-info").textContent = content.info; // Update the main info text
+        document.getElementById("extended-content").innerHTML = content.details; // Update detailed info
+        document.getElementById("time-frame-text").textContent = decade; // Update the decade range
+        currentImageIndex = 0; // Reset to the first image
+        updateImage(decade); // Update the image based on the new decade
+    }
+
+    document.getElementById("image-left").addEventListener("click", () => {
+        const activeDecade = document.querySelector(".timeline-btn.active").getAttribute("data-decade");
+        currentImageIndex--;
+        updateImage(activeDecade);
+    });
+
+    document.getElementById("image-right").addEventListener("click", () => {
+        const activeDecade = document.querySelector(".timeline-btn.active").getAttribute("data-decade");
+        currentImageIndex++;
+        updateImage(activeDecade);
+    });
+
+
+    // Add event listeners to timeline buttons
+    document.querySelectorAll(".timeline-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+            const decade = button.getAttribute("data-decade"); // Get the decade
+            document.querySelectorAll(".timeline-btn").forEach((btn) => btn.classList.remove("active")); // Remove active class from all buttons
+            button.classList.add("active"); // Set the active class for the clicked button
+            updateContent(decade); // Update content for the selected decade
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const defaultDecade = "1902-1910";
+        document.querySelector(`.timeline-btn[data-decade="${defaultDecade}"]`).classList.add("active");
+        updateContent(defaultDecade);
+    });
+
+    const scrollLeftButton = document.getElementById("scroll-left");
+    const scrollRightButton = document.getElementById("scroll-right");
+    const timelineContainer = document.getElementById("timeline-container");
+
+    // Function to scroll left
+    scrollLeftButton.addEventListener("click", () => {
+        timelineContainer.scrollBy({
+            left: -300, // Adjust the scroll amount
+            behavior: "smooth"
+        });
+    });
+
+    // Function to scroll right
+    scrollRightButton.addEventListener("click", () => {
+        timelineContainer.scrollBy({
+            left: 300, // Adjust the scroll amount
+            behavior: "smooth"
+        });
+    });
+
+</script>
+<script src="rotation.js"></script>
+</body>
+</html>
+

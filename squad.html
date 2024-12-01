@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid Football Club - Current Squad</title>
+    <link rel="stylesheet" href="squad.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-logo-left">
+            <img src="adidas1.png" alt="Adidas Logo" class="header-logo">
+        </div>
+        <h1>Real Madrid Football Club</h1>
+        <img id="rotating-logo" class="transition-logo" src="Real-Madrid-symbol.png" alt="Real Madrid Logo">
+        <div class="header-logo-right">
+            <img src="Emirates.webp" alt="Fly Emirates Logo" class="header-logo">
+        </div>
+    </header>
+
+<!-- Menu Icon -->
+<div class="menu-icon" id="menu-icon">
+    <span>&#9776;</span>
+</div>
+
+<!-- Menu Bar -->
+<div class="menu-bar" id="menu-bar">
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="legends.html">Legends</a>
+    <a href="trophies.html">Trophy Cabinet</a>
+    <a href="squad.html" class="active">Current Squad</a>
+</div>
+
+<!-- Overlay for Menu -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<main>
+    <div class="transparent-background">
+        <h2>Current Squad</h2>
+        <div class="squad-section">
+            <a href="https://www.realmadrid.com/en-US/football/first-team/players" target="_blank">
+                <img src="REAL_MADRID_SQUAD.jpeg" alt="Current Squad">
+            </a>
+            <p>Click on the image to view the current squad on the official Real Madrid website.</p>
+        </div>
+
+        <div class="current-squad">
+            <!-- Coach -->
+            <div class="squad-category">
+                <h3>Coach</h3>
+                <ul>
+                    <li class="player-name" data-image="Ancelloti.jpeg">Carlo Ancelotti</li>
+                </ul>
+            </div>
+
+            <div class="squad-category">
+                <h3>Goalkeepers</h3>
+                <ul>
+                    <li class="player-name" data-image="Courtois.png">Courtois</li>
+                </ul>
+            </div>
+
+            <!-- Defenders -->
+            <div class="squad-category">
+                <h3>Defenders</h3>
+                <ul>
+                    <li class="player-name" data-image="Alaba.png">David Alaba</li>
+                    <li class="player-name" data-image="Rudiger.png">Antonio Rüdiger</li>
+                    <li class="player-name" data-image="Carvajal.png">Dani Carvajal</li>
+                    <li class="player-name" data-image="Mendy.png">Ferland Mendy</li>
+                </ul>
+            </div>
+
+            <!-- Midfielders -->
+            <div class="squad-category">
+                <h3>Midfielders</h3>
+                <ul>
+                    <li class="player-name" data-image="Bellingham1.png">Bellingham</li>
+                    <li class="player-name" data-image="Modric.webp">Luka Modric</li>
+                    <li class="player-name" data-image="Fede.png">Fede Valverde</li>
+                </ul>
+            </div>
+
+            <!-- Attackers -->
+            <div class="squad-category">
+                <h3>Attackers</h3>
+                <ul>
+                    <li class="player-name" data-image="Vini.png">Vinicius Jr.</li>
+                    <li class="player-name" data-image="Rodrygo.png">Rodrygo</li>
+                    <li class="player-name" data-image="Mbappe.png">Mbappe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up for Player Details -->
+    <div id="player-popup" class="popup">
+        <span class="close-popup">&times;</span>
+        <img src="" alt="Player Image" id="popup-image">
+    </div>
+</main>
+
+<footer>
+    <p>&copy; Real Madrid Football Club</p>
+</footer>
+
+<script>
+    // Menu functionality
+    const menuIcon = document.getElementById('menu-icon');
+    const menuBar = document.getElementById('menu-bar');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    function toggleMenu() {
+        menuBar.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+    }
+
+    function closeMenu() {
+        menuBar.classList.remove('active');
+        menuOverlay.classList.remove('active');
+    }
+
+    menuIcon.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+    document.querySelectorAll('.menu-bar a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Pop-up functionality
+    const popup = document.getElementById('player-popup');
+    const popupImage = document.getElementById('popup-image');
+    const closePopup = document.querySelector('.close-popup');
+
+    document.querySelectorAll('.player-name').forEach(player => {
+        player.addEventListener('click', () => {
+            const imagePath = player.getAttribute('data-image');
+            popupImage.src = imagePath;
+            popup.classList.add('visible');
+        });
+    });
+
+    closePopup.addEventListener('click', () => {
+        popup.classList.remove('visible');
+    });
+
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.remove('visible');
+        }
+    });
+</script>
+<script src="rotation.js"></script>
+</body>
+</html>
