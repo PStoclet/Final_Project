@@ -15,18 +15,6 @@
     font-size: 0.7rem;
 }
 
-h2 {
-    padding-bottom: 1em;
-    font-size: 1.5rem; /* Large font size for emphasis */
-    font-weight: 700; /* Bold for a dramatic effect */
-    color: #444; /* Darker gray for a subtle classic feel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    margin-top: 1.5rem; /* Add some space above */
-    margin-bottom: 0rem; /* Add spacing below */
-    line-height: 1.2; /* Adjust line height for readability */
-}
-
 /* Legend Name Hover */
 .legend-name {
     cursor: pointer;
@@ -150,10 +138,6 @@ h2 {
 
 /* Mobile Screens (0px and above) */
 @media (min-width: 0px) {
-    h2 {
-        font-size: 1.2rem; /* Smallest font size for mobile devices */
-    }
-
     .popup {
         width: 95%; /* Full-width popup for small screens */
     }
@@ -172,10 +156,6 @@ h2 {
 
 /* Medium Screens (481px and above) */
 @media (min-width: 481px) {
-    h2 {
-        font-size: 1.8rem; /* Slightly larger font size */
-    }
-
     .popup {
         width: 85%; /* Slightly larger width */
     }
@@ -194,10 +174,6 @@ h2 {
 
 /* Larger Screens (769px and above) */
 @media (min-width: 769px) {
-    h2 {
-        font-size: 2rem; /* Larger font size */
-    }
-
     .popup {
         width: 75%; /* Adjusted width for larger screens */
     }
@@ -216,10 +192,6 @@ h2 {
 
 /* Extra Large Screens (1024px and above) */
 @media (min-width: 1024px) {
-    h2 {
-        font-size: 2.5rem; /* Largest font size */
-    }
-
     .popup {
         width: 70%; /* Reduced width for extra large screens */
     }
@@ -235,5 +207,4 @@ h2 {
         font-size: 1rem;
     }
 }
-
 
