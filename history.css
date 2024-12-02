@@ -230,9 +230,6 @@
         color: rgba(0, 0, 0, 0.4); /* Slightly darker opacity */
     }
 
-    h2.history-title {
-        font-size: 2rem; /* Increase font size for tablets */
-    }
 }
 
 /* Styles for Screens Larger Than 1024px */
@@ -252,9 +249,6 @@
         width: calc(100% - 6rem); /* Adjust width for large screens */
     }
 
-    h2.history-title {
-        font-size: 2.5rem; /* Larger font size for desktop screens */
-    }
 }
 
 
@@ -281,19 +275,4 @@
 }
 
 
-/* Default Title Styling (for smallest screens) */
 
-h2 {
-    font-size: 1.5rem; /* Base font size for smallest screens */
-    font-weight: 700;
-    color: #444;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-top: 1.5rem;
-    margin-bottom: 0rem;
-    line-height: 1.2;
-}
-
-h2.history-title:hover {
-    color: #d4af37; /* Change the text color on hover */
-}
