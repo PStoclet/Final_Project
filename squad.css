@@ -98,22 +98,6 @@ footer {
     width: 100%;
 }
 
-h2.transparent-background:hover {
-    color: #d4af37; /* Change the text color on hover */
-}
-
-h2 {
-    padding-bottom: 1em;
-    font-size: 2.5rem; /* Large font size for emphasis */
-    font-weight: 700; /* Bold for a dramatic effect */
-    color: #444; /* Darker gray for a subtle classic feel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    margin-top: 1.5rem; /* Add some space above */
-    margin-bottom: 0rem; /* Add spacing below */
-    line-height: 1.2; /* Adjust line height for readability */
-}
-
 /* Responsive Adjustments */
 
 /* For medium screens (min-width: 480px) */
@@ -128,10 +112,6 @@ h2 {
 
     .popup img {
         max-height: 300px; /* Adjust image size */
-    }
-
-    h2 {
-        font-size: 1.8rem; /* Slightly larger header font */
     }
 }
 
@@ -151,10 +131,6 @@ h2 {
     .popup img {
         max-height: 400px; /* Larger image size for tablets */
     }
-
-    h2 {
-        font-size: 2rem; /* Increase header size */
-    }
 }
 
 /* For larger screens (min-width: 1024px) */
@@ -170,9 +146,5 @@ h2 {
 
     .popup img {
         max-height: 450px; /* Largest image size */
-    }
-
-    h2 {
-        font-size: 2.5rem; /* Largest header font */
     }
 }
