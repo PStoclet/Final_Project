@@ -218,17 +218,6 @@ main {
     object-fit: contain;
 }
 
-h2{
-    padding-bottom: 1em;
-    font-size: 2.5rem; /* Large font size for emphasis */
-    font-weight: 700; /* Bold for a dramatic effect */
-    color: #444; /* Darker gray for a subtle classic feel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    margin-top: 1.5rem; /* Add some space above */
-    margin-bottom: 0rem; /* Add spacing below */
-    line-height: 1.2; /* Adjust line height for readability */
-}
 
 p{
     margin-bottom: 2rem; /* Add spacing below */
