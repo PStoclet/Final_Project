@@ -5,6 +5,21 @@
     box-sizing: border-box;
 }
 
+/* Default Title Styling (for smallest screens) */
+
+h2 {
+    font-size: 1.5rem; /* Base font size for smallest screens */
+    font-weight: 700;
+    color: #444;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+    line-height: 1.2;
+}
+
+
+
 h2:hover{
     color: #d4af37;
 }
@@ -173,6 +188,9 @@ footer {
         width: auto; /* Maintain aspect ratio */
         margin: 0 30px; /* Reduce space between logo and title */
     }
+    h2{
+        font-size: 1.5rem; /* Larger font size for desktop screens */
+    }
 }
 
 /* For screens 768px and above */
@@ -199,6 +217,9 @@ footer {
         height: 40px; /* Standard logo size */
         margin: 0 20px; /* Adjust space between title and logo */
     }
+    h2{
+        font-size: 2rem; /* Larger font size for desktop screens */
+    }
 }
 
 /* For screens 1024px and above */
@@ -218,6 +239,10 @@ footer {
 
     .menu-bar {
         width: 300px; /* Wider menu bar for larger screens */
+    }
+
+    h2{
+        font-size: 2.5rem; /* Larger font size for desktop screens */
     }
 }
 
@@ -352,4 +377,3 @@ html {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
-
