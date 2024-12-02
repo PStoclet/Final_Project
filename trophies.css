@@ -35,17 +35,18 @@ main {
 
 
 
+/* Base layout for smaller screens (default stacked vertically) */
 .trophy-horizontal {
     display: flex;
+    flex-direction: column; /* Stack items vertically by default */
     align-items: center;
-    justify-content: space-between; /* Push content to edges */
+    text-align: center;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 1rem;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 150px; /* Set a consistent height for the boxes */
+    gap: 1rem;
 }
 
 .trophy-horizontal:hover {
@@ -211,8 +212,8 @@ main {
 
 /* Modal Image Styling */
 #modal-image {
-    width: 600px;
-    height: 400px;
+    width: 400px;
+    height: 200px;
     border-radius: 8px;
     object-fit: contain;
 }
@@ -234,53 +235,75 @@ p{
 }
 
 
-
-@media (max-width: 1024px) {
-    .video-container {
-        width: 70%; /* Slightly larger for smaller desktops/laptops */
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Adjust layout for medium screens (480px and above) */
+@media (min-width: 480px) {
     .trophy-horizontal {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .trophy-info {
-        text-align: center;
+        flex-direction: column; /* Maintain vertical alignment */
+        padding: 1.5rem; /* Increase padding for medium screens */
     }
 
     .trophy-image {
-        margin-left: 0;
-        margin-bottom: 1rem;
+        width: 120px;
+        height: 120px; /* Slightly larger images for medium screens */
     }
 
-    /* Modal Image Responsive Adjustments */
+    .trophy-info h3 {
+        font-size: 1.3rem; /* Slightly larger font for headings */
+    }
+
+    .trophy-info .years {
+        font-size: 0.9rem; /* Increase font size for years text */
+    }
+
     #modal-image {
-        width: 100%; /* Use full width for smaller devices */
-        max-height: 85%; /* Adjust for smaller vertical space */
-    }
-
-    .gallery-modal {
-        padding: 1rem; /* Ensure some spacing around the image */
-    }
-
-    .video-container {
-        width: 85%; /* Larger for tablets */
-        min-width: 250px; /* Maintain a minimum size */
-    }
+        width: 500px;
+        height: 300px;
 }
 
-@media (max-width: 480px) {
-    /* Additional Tweaks for Very Small Screens */
+/* Adjust layout for larger screens (768px and above) */
+@media (min-width: 768px) {
+    .trophy-horizontal {
+        flex-direction: row; /* Switch to horizontal alignment */
+        align-items: center;
+        text-align: left;
+        gap: 1.5rem; /* Increase spacing between elements */
+        padding: 2rem; /* Add more padding for larger screens */
+    }
+
+    .trophy-image {
+        margin-left: 1rem; /* Add left margin to image */
+        margin-bottom: 0;
+    }
+
+    .trophy-info {
+        text-align: left; /* Align text to the left */
+    }
+
     #modal-image {
-        width: 100%; /* Full width */
-        max-height: 90%; /* Prevent it from taking too much vertical space */
-    }
-    .video-container {
-        width: 95%; /* Nearly full width for mobile devices */
-        min-width: 220px; /* Prevent shrinking too much */
-    }
+        width: 650px;
+        height: 450px;
 }
+
+/* Adjust layout for extra-large screens (1024px and above) */
+@media (min-width: 1024px) {
+    .trophy-horizontal {
+        gap: 2rem; /* Larger spacing for better distribution */
+        padding: 2.5rem; /* More padding for larger screens */
+    }
+
+    .trophy-info h3 {
+        font-size: 1.5rem; /* Larger font size for headings */
+    }
+
+    .trophy-info .years {
+        font-size: 1rem; /* Slightly larger font size for year text */
+    }
+
+    #modal-image {
+        width: 750px;
+        height: 550px;
+}
+
+
+
+
