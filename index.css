@@ -128,6 +128,28 @@ main {
         width: 80px;
         height: 80px;
     }
+    .news-details {
+        font-size: 1rem; /* Larger font size for readability */
+        padding: 0 1.5rem; /* Increased padding for medium screens */
+        max-height: 300px; /* Increase max height for medium screens */
+    }
+
+    .news-item.open .news-details {
+        padding: 1.5rem; /* Adjust padding when expanded */
+    }
+}
+
+/* Styles for Screens Larger Than 1024px */
+@media (min-width: 1024px) {
+    .news-details {
+        font-size: 1.1rem; /* Larger font size for better readability */
+        padding: 0 2rem; /* More padding for larger screens */
+        max-height: 400px; /* Allow more content to be visible */
+    }
+
+    .news-item.open .news-details {
+        padding: 2rem; /* Increase padding for larger screens */
+    }
 }
 
 /* Footer Styling */
@@ -144,31 +166,20 @@ footer {
     opacity: 0; /* Fully transparent */
     max-height: 0; /* Collapse height */
     overflow: hidden; /* Prevent content overflow */
-    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Smooth animation */
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    text-align: justify; /* Justify text alignment */
+    font-size: 0.9rem; /* Smaller font size for compact readability */
+    padding: 0 1rem; /* Minimal padding for small screens */
 }
 
+/* News Item Expanded on Small Screens */
 .news-item.open .news-details {
     visibility: visible; /* Make visible when expanded */
     opacity: 1; /* Fully opaque */
-    max-height: 300px; /* Limit the maximum height of the expanded details */
-    overflow-y: auto; /* Enable scrolling if the content exceeds the max-height */
-    text-align: justify; /* Justify text alignment */
-    padding-right: 10px; /* Add some padding to avoid overlapping with the scrollbar */
+    max-height: 250px; /* Limit the maximum height */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    padding: 1rem; /* Add padding for spacing */
 }
-
-h2{
-    padding-bottom: 1em;
-    font-size: 2.5rem; /* Large font size for emphasis */
-    font-weight: 700; /* Bold for a dramatic effect */
-    color: #444; /* Darker gray for a subtle classic feel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    margin-top: 1.5rem; /* Add some space above */
-    margin-bottom: 0rem; /* Add spacing below */
-    line-height: 1.2; /* Adjust line height for readability */
-}
-
-
 
 .news-item {
     padding-bottom: 1rem; /* Consistent spacing between items */
